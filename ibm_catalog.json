@@ -39,6 +39,7 @@
 							{
 								"diagram": {
                                     "caption": "Static Website",
+									"url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-static-website/main/diagrams/architecture.svg",
                                     "type": "image/svg+xml"
                                 },
 								"description": "This sample deployable architecture creates a free, static website as a proof of concept. It uses the IBM Cloud terraform provider to create the following:\n\n- An IBM Cloud Object Storage (COS) bucket configured for public web access\n- A toolchain that provides a hosted GitLab repository to store a static website html\n- A simple pipeline that copies that HTML to the Object Storage bucket when the main branch is updated\n\nThe result is a simple static website with its source stored in a GitLab repository that's automatically updated when the repository is updated."
