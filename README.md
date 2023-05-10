@@ -49,6 +49,7 @@ The following permissions are required to run this module:
 - The name of the COS bucket ("cos_bucket_name") must be globally unique.
 - This sample can be deployed only to regions where toolchains are supported.
 - You can have only a single "lite" COS instance. If you want to deploy more instances, then switch to the "standard" plan.
+- This sample requires the jq command line tool installed on your device when provisioned locally.
 
 ## Onboarding to a private catalog
 - As part of the onboarding process, the **ibm_catalog.json** file will handle some of the work of filling out the details of the deployable architecture. This includes pre-filling the configuration metadata and Security and Compliance Center profiles. Regardless, it is up the end-user to define the remainder of the deployable architecture's metadata in the onboarding process which includes the name, tags, keywords, etc.
