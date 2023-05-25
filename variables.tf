@@ -16,7 +16,7 @@ variable "cos_plan_type" {
 }
 
 variable "resource_group" {
-  description = "Enter the name of the resource group in which you would like your resources to be deployed."
+  description = "Enter the name of the existing resource group in which you would like your resources to be deployed."
   type    = string
   default = "default"
 }
