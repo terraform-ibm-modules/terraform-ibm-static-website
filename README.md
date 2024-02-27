@@ -37,7 +37,7 @@ The following permissions are required to run this module:
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.2.6 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.4.6 |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
