@@ -1,105 +1,111 @@
 {
-	"products": [
-		{
-			"product_kind": "solution",
-			"tags": [],
-			"keywords": [],
-			"short_description": "Deploy a free, static website using this sample deployable architecture. Includes a GitLab repository for source code control.",
-			"long_description": "This sample deployable architecture creates a static website hosted by using IBM Cloud Object Storage. The Terraform template deploys a IBM Cloud Object Storage bucket, a GitLab repository for the website source, and a toolchain that deploys the code from GitLab to the storage bucket when changes are made. Select a new or existing GitLab repository, as well as what branch to watch. The URL of the static website is provided as an output after you deploy it.",
-			"offering_docs_url": "None",
-			"offering_icon_url": "https://globalcatalog.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/terraform.svg",
-			"features": [],
-			"flavors": [
-				{
-					"usage": "export ibmcloud_api_key=\u003cibm user api key\u003e\nexport git_token\u003cuser git token\u003e\nexport region=us-south\nexport resource_group=default\nexport cos_bucket_name=mybucketname\nterraform plan",
-					"compliance": {
-						"authority": "scc-v3",
-                        "controls": [
-                            {
-                                "profile": {
-                                    "name": "IBM Cloud for Financial Services",
-                                    "version": "1.2.0"
-                                },
-                                "names": [
-                                    "SA-8(0)",
-									"AU-4(0)",
-									"SI-12(0)",
-									"CM-7(a)",
-									"CM-7(b)",
-									"CM-3(2)(0)",
-									"SC-11(0)",
-									"SC-7(4)(c)",
-									"SC-23(0)"
-                                ]
-                            }
-                        ]
-					},
-					"architecture": {
-						"diagrams": [
-							{
-								"diagram": {
-                                    "caption": "Static Website",
-									"url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-static-website/main/diagrams/architecture.svg",
-                                    "type": "image/svg+xml"
-                                },
-								"description": "This sample deployable architecture creates a free, static website as a proof of concept. It uses the IBM Cloud terraform provider to create the following:\n\n- An IBM Cloud Object Storage (COS) bucket configured for public web access\n- A toolchain that provides a hosted GitLab repository to store a static website html\n- A simple pipeline that copies that HTML to the Object Storage bucket when the main branch is updated\n\nThe result is a simple static website with its source stored in a GitLab repository that's automatically updated when the repository is updated."
-							}
-						]
-					},
-					"configuration": [
-						{
-							"key": "app_repo_name",
-							"type": "string",
-							"default_value": "sample-solution-app-repo",
-							"description": "Enter a name for the new repository that's created to store your application files.",
-							"required": true
-						},
-						{
-							"key": "cos_bucket_name",
-							"type": "string",
-							"description": "Name the bucket that will be created on your IBM Cloud Object Storage instance. Bucket names must be globally unique across IBM Cloud, and must be 3-63 characters in length. The name can include lowercase alphanumeric characters as well as nonconsecutive dashes and hyphens, but must start and end with alphanumeric characters.",
-							"required": true
-						},
-						{
-							"key": "cos_instance_name",
-							"type": "string",
-							"default_value": "sample-solution-cos-instance",
-							"description": "Give your IBM Cloud Object Storage instance a unique name. Lite accounts are limited to one instance of Object Storage, so you might need to delete an existing instance.",
-							"required": true
-						},
-						{
-							"key": "cos_plan_type",
-							"type": "string",
-							"default_value": "lite",
-							"description": "Enter a plan type for your IBM Cloud Object Storage instance. The Lite plan is recommended for most users."
-						},
-						{
-							"key": "ibmcloud_api_key",
-							"type": "password",
-							"description": "Enter an API key you will use to deploy.",
-							"required": true
-						},
-						{
-							"key": "git_token",
-							"type": "password",
-							"description": "Provide a GitLab access token from your account.",
-							"required": true
-						},
-						{
-							"key": "region",
-							"type": "string",
-							"default_value": "us-south",
-							"description": "Enter the region where you'd like to deploy your resources."
-						},
-						{
-							"key": "resource_group",
-							"type": "string",
-							"default_value": "default",
-							"description": "Enter the name of the resource group that will contain your resources when you deploy them."
-						}
-					]
-				}
-			]
-		}
-	]
+  "products": [
+    {
+      "product_kind": "solution",
+      "tags": [
+        "ibm_created",
+        "target_terraform",
+        "terraform",
+        "solution",
+        "converged_infra"
+      ],
+      "keywords": [],
+      "short_description": "Deploy a free, static website using this sample deployable architecture. Includes a GitLab repository for source code control.",
+      "long_description": "This sample deployable architecture creates a static website hosted by using IBM Cloud Object Storage. The Terraform template deploys a IBM Cloud Object Storage bucket, a GitLab repository for the website source, and a toolchain that deploys the code from GitLab to the storage bucket when changes are made. Select a new or existing GitLab repository, as well as what branch to watch. The URL of the static website is provided as an output after you deploy it.",
+      "offering_docs_url": "None",
+      "offering_icon_url": "https://globalcatalog.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/terraform.svg",
+      "features": [],
+      "flavors": [
+        {
+          "usage": "export ibmcloud_api_key=<ibm user api key>\nexport git_token<user git token>\nexport region=us-south\nexport resource_group=default\nexport cos_bucket_name=mybucketname\nterraform plan",
+          "compliance": {
+            "authority": "scc-v3",
+            "controls": [
+              {
+                "profile": {
+                  "name": "IBM Cloud for Financial Services",
+                  "version": "1.2.0"
+                },
+                "names": [
+                  "SA-8(0)",
+                  "AU-4(0)",
+                  "SI-12(0)",
+                  "CM-7(a)",
+                  "CM-7(b)",
+                  "CM-3(2)(0)",
+                  "SC-11(0)",
+                  "SC-7(4)(c)",
+                  "SC-23(0)"
+                ]
+              }
+            ]
+          },
+          "architecture": {
+            "diagrams": [
+              {
+                "diagram": {
+                  "caption": "Static Website",
+                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/terraform-ibm-static-website/main/diagrams/architecture.svg",
+                  "type": "image/svg+xml"
+                },
+                "description": "This sample deployable architecture creates a free, static website as a proof of concept. It uses the IBM Cloud terraform provider to create the following:\n\n- An IBM Cloud Object Storage (COS) bucket configured for public web access\n- A toolchain that provides a hosted GitLab repository to store a static website html\n- A simple pipeline that copies that HTML to the Object Storage bucket when the main branch is updated\n\nThe result is a simple static website with its source stored in a GitLab repository that's automatically updated when the repository is updated."
+              }
+            ]
+          },
+          "configuration": [
+            {
+              "key": "app_repo_name",
+              "type": "string",
+              "default_value": "sample-solution-app-repo",
+              "description": "Enter a name for the new repository that's created to store your application files.",
+              "required": true
+            },
+            {
+              "key": "cos_bucket_name",
+              "type": "string",
+              "description": "Name the bucket that will be created on your IBM Cloud Object Storage instance. Bucket names must be globally unique across IBM Cloud, and must be 3-63 characters in length. The name can include lowercase alphanumeric characters as well as nonconsecutive dashes and hyphens, but must start and end with alphanumeric characters.",
+              "required": true
+            },
+            {
+              "key": "cos_instance_name",
+              "type": "string",
+              "default_value": "sample-solution-cos-instance",
+              "description": "Give your IBM Cloud Object Storage instance a unique name. Lite accounts are limited to one instance of Object Storage, so you might need to delete an existing instance.",
+              "required": true
+            },
+            {
+              "key": "cos_plan_type",
+              "type": "string",
+              "default_value": "lite",
+              "description": "Enter a plan type for your IBM Cloud Object Storage instance. The Lite plan is recommended for most users."
+            },
+            {
+              "key": "ibmcloud_api_key",
+              "type": "password",
+              "description": "Enter an API key you will use to deploy.",
+              "required": true
+            },
+            {
+              "key": "git_token",
+              "type": "password",
+              "description": "Provide a GitLab access token from your account.",
+              "required": true
+            },
+            {
+              "key": "region",
+              "type": "string",
+              "default_value": "us-south",
+              "description": "Enter the region where you'd like to deploy your resources."
+            },
+            {
+              "key": "resource_group",
+              "type": "string",
+              "default_value": "default",
+              "description": "Enter the name of the resource group that will contain your resources when you deploy them."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
