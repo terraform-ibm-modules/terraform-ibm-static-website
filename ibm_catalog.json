@@ -103,7 +103,8 @@
               "default_value": "default",
               "description": "Enter the name of the resource group that will contain your resources when you deploy them."
             }
-          ]
+          ],
+          "terraform_version": "1.10.5"
         }
       ]
     }
