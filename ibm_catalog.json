@@ -7,7 +7,7 @@
         "target_terraform",
         "terraform",
         "solution",
-        "converged_infra"
+        "platform_engineering"
       ],
       "keywords": [],
       "short_description": "Deploy a free, static website using this sample deployable architecture. Includes a GitLab repository for source code control.",
